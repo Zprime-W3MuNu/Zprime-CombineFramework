@@ -1,6 +1,6 @@
 # Zprime-CombineFramework
 
-# Instructions for for setting up and running for running W->3munu shape analysis
+## Instructions for for setting up and running W->3mu nu shape analysis
 After logging into the ```lxplus9``` account, following steps can be followed:
 ## 1. Setup 
 ```
