@@ -148,27 +148,16 @@ mass_points = [2,4, 5, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
 for mass in mass_points:
     process_mass_point(mass)
 
-#process_mass_point(30)
-#process_mass_point(35)
-#process_mass_point(40)
-#process_mass_point(45)
-#process_mass_point(50)
-#process_mass_point(55)
-#process_mass_point(60)
-#process_mass_point(65)
 #process_mass_point(70)
 
-#with open("mass_point_data.py", "w") as f:
-#with open("mass_point_data_sumw.py", "w") as f:
-#with open("mass_point_data_ent.py", "w") as f:
-with open("mass_point_data_ent_Feb18.py", "w") as f:
+with open("weights_knownMC.py", "w") as f:
     f.write("mass_point_weights = ")
     f.write(str(mass_point_weights))
 
 # Plotting
-#output_dir = "/eos/user/t/tjavaid/www/Wto3l/fits/2016/gauss_dscb/newWPs/discrete/mean/interpolations/norms/"
-#output_dir = "/eos/user/t/tjavaid/www/Wto3l/fits/2016/gauss_dscb/newWPs/discrete/mean/interpolations/norms_ent/"
-output_dir = "/eos/user/t/tjavaid/www/Wto3l/fits/2016/gauss_dscb/newWPs/discrete/mean/interpolations/norms_ent_Feb18/"
+#output_dir = "/eos/user/t/tjavaid/www/Wto3l/fits/2016/gauss_dscb/newWPs/discrete/mean/interpolations/norms_ent_Feb18/"
+output_dir = "test"
+os.makedirs(output_dir, exist_ok=True)
 
 import matplotlib.pyplot as plt
 from scipy.interpolate import PchipInterpolator
@@ -188,8 +177,8 @@ plt.ylabel('Total Weight')
 plt.title('Mass Point Weights')
 plt.legend()
 plt.grid()
-plt.savefig(f"{output_dir}/mass_point_weights.png")
-plt.savefig(f"{output_dir}/mass_point_weights.pdf")
+plt.savefig(f"{output_dir}/weights_knownMC.png")
+plt.savefig(f"{output_dir}/weights_knownMC.pdf")
 plt.close()
 
 
