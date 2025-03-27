@@ -13,6 +13,7 @@ cd $CMSSW_BASE/src/HiggsAnalysis/CombinedLimit
 git fetch origin
 git checkout v10.1.0
 scramv1 b clean; scramv1 b
+cd $CMSSW_BASE/src/
 git clone https://github.com/Zprime-W3MuNu/Zprime-CombineFramework.git
 cd Zprime-CombineFramework
 ```
