@@ -472,8 +472,8 @@ def create_background_workspace(mass, year, output_dir,DNN_scores):
             ROOT.RooFit.PrintLevel(-1),
             ROOT.RooFit.Save()
         )
-        for param in params:
-            param.setConstant(True)
+#        for param in params: # to keep bkg params floating in the fit 
+#            param.setConstant(True)
     print("fit_results_bkg:     :",fit_results_bkg)
     print("fit_results_bkg[model_exp_bkg]:     :",fit_results_bkg["model_exp_bkg"])
     # RooMultiPdf
